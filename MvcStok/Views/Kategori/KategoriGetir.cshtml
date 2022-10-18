@@ -1,0 +1,27 @@
+﻿@model MvcStok.Models.Entity.Tbl_Kategoriler
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Kategori Getir Sayfası</h2>
+
+@using (Html.BeginForm("Guncelle", "Kategori", FormMethod.Post))
+{
+    //1. parametre ne zaman çalışacağı
+    //2. Guncelle nerede ? 
+    //3. Ne zman çalışacak ? 
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.Kategoriid)
+        @Html.TextBoxFor(m=>m.Kategoriid, new {@class="form-control"})
+        <br />
+        @Html.LabelFor(m=>m.KategoriAd)
+        @Html.TextBoxFor(m=>m.KategoriAd, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <button class="btn btn-warning">KATEGORİ GÜNCELLE</button>
+    </div>
+}
+
